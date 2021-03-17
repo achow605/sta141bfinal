@@ -48,7 +48,8 @@ pokemon <- temp[!grepl("-", temp$name),] %>%
     mutate(height = getHeight(url)) %>%
     ungroup()
 
-# Define UI for application that draws a histogram
+
+# Define UI for application
 ui <- fluidPage(
 
     # Application title
@@ -72,7 +73,9 @@ ui <- fluidPage(
     )
 )
 
-# Define server logic required to draw a histogram
+
+
+# Define server logic
 server <- function(input, output, session) {
 
     observeEvent(input$units, {
